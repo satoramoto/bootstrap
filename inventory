@@ -1,0 +1,4 @@
+servers:
+  hosts:
+    tokyo:
+    new-york:
