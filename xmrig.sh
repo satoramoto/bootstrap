@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Setup for xmrig
 useradd -Umr xmrig
 
@@ -16,8 +18,7 @@ mkdir /var/log/xmrig
 chown xmrig:xmrig /var/log/xmrig
 
 # create systemd file
-wget https://github.com/satoramoto/boostrap/xmrig.service /etc/systemd/system/xmrig.service
-nano /etc/systemd/system/xmrig.service
+wget https://github.com/satoramoto/bootstrap/raw/refs/heads/main/xmrig/xmrig.service /etc/systemd/system/xmrig.service
 
 systemctl daemon-reload
 systemctl enable xmrig
