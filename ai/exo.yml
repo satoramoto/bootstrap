@@ -1,0 +1,9 @@
+---
+
+- hosts: macpros
+  become: true
+  tasks:
+
+  - name: Install exo to cluster all the AI nodes
+    community.general.pipx:
+      name: exo

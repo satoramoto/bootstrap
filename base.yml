@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  become_method: su
+  tasks:
+
+  - name: Install necessary tools
+    apt:
+      pkg:
+      - sudo
+      - git
+      - pipx
+
+  - name: Add Satori to the sudoers group
+    ansible.builtin.user:
+      name: satori    
+      append: true
+      groups: sudo
